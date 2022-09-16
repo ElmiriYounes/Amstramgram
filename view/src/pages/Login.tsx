@@ -1,7 +1,8 @@
 import React, { FC } from "react";
+import AuthLogin from "../components/auth/AuthLogin";
 
 const Login:FC = () => {
-  return <div>Login</div>;
+  return <AuthLogin/>;
 };
 
 export default Login;
