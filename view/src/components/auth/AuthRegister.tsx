@@ -78,7 +78,7 @@ const AuthRegister: FC = () => {
       setFetching(true);
       try {
         const response = await axios.post(
-          `${uri}/register`,
+          `${uri}/users/register`,
           {
             username,
             password,
