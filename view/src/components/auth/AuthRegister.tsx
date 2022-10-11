@@ -161,7 +161,7 @@ const AuthRegister: FC = () => {
         </AuthBox>
         <AuthBox>
           <AuthPageText>
-            Already an account? Log in <Link to="/">here</Link>
+            Already an account? Log in <Link to={window.location.hostname.substring(0,9) === "localhost" ? '/login' : "/Amstramgram/login"}>here</Link>
           </AuthPageText>
         </AuthBox>
       </AuthBoxContainer>

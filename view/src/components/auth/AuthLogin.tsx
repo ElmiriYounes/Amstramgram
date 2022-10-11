@@ -50,7 +50,7 @@ const AuthLogin: FC = () => {
           maxAge: 3600,
         });
         
-        navigate("/");
+        window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/Amstramgram");
       } catch (error: any) {
         const status = error.response.status;
         status === 401
@@ -109,9 +109,9 @@ const AuthLogin: FC = () => {
             />
           </AuthForm>
         </AuthBox>
-        <AuthBox>
+        <AuthBox>d
           <AuthPageText>
-            No account yet? Sign Up <Link to="/register">here</Link>
+            No account yet? Sign Up <Link to={window.location.hostname.substring(0,9) === "localhost" ? '/register' : "/Amstramgram/register"}>here</Link>
           </AuthPageText>
         </AuthBox>
       </AuthBoxContainer>
