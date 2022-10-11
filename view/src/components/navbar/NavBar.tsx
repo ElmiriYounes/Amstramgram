@@ -12,17 +12,17 @@ const NavBar = () => {
 
   const homeClickHandler = () => {
     console.log("home");
-    window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/amstramgram");
+    window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/Amstramgram");
   }
 
   const newPostClickHandler = () => {
     console.log("new post");
-    window.location.hostname.substring(0,9) === "localhost" ? navigate('/newPost') : navigate("/amstramgram/newPost");
+    window.location.hostname.substring(0,9) === "localhost" ? navigate('/newPost') : navigate("/Amstramgram/newPost");
   }
 
   const profileClickHandler = () => {
     console.log("profile");
-    window.location.hostname.substring(0,9) === "localhost" ? navigate('/profile') : navigate("/amstramgram/profile");
+    window.location.hostname.substring(0,9) === "localhost" ? navigate('/profile') : navigate("/Amstramgram/profile");
   }
 
   return (

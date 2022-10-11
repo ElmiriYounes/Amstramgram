@@ -77,11 +77,11 @@ const Profil = () => {
 
   const handleClick = () => {
     removeCookie("userToken", { path: "/", sameSite: "none", secure: true });
-    window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/amstramgram/");
+    window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/Amstramgram/");
   };
 
   const handleClickEdit = () => {
-    window.location.hostname.substring(0,9) === "localhost" ? navigate('/editProfile') : navigate("/amstramgram/editProfile");
+    window.location.hostname.substring(0,9) === "localhost" ? navigate('/editProfile') : navigate("/Amstramgram/editProfile");
   };
 
   const handleDelete = async (_id: number) => {

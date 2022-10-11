@@ -15,27 +15,27 @@ const App: FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path={window.location.hostname.substring(0,9) === "localhost" ? '/' : "/amstramgram"} element={cookies.userToken ? <Home /> : <Login />} />
-        <Route path={window.location.hostname.substring(0,9) === "localhost" ? '/register' : "/amstramgram/register"} element={<Register />} />
+        <Route path={window.location.hostname.substring(0,9) === "localhost" ? '/' : "/Amstramgram"} element={cookies.userToken ? <Home /> : <Login />} />
+        <Route path={window.location.hostname.substring(0,9) === "localhost" ? '/register' : "/Amstramgram/register"} element={<Register />} />
         <Route
-          path={window.location.hostname.substring(0,9) === "localhost" ? '/profile' : "/amstramgram/profile"}
+          path={window.location.hostname.substring(0,9) === "localhost" ? '/profile' : "/Amstramgram/profile"}
           element={
             cookies.userToken ? <Profile /> : <ErrorStatus status={"401"} />
           }
         />
         <Route
-          path={window.location.hostname.substring(0,9) === "localhost" ? '/newPost' : "/amstramgram/newPost"}
+          path={window.location.hostname.substring(0,9) === "localhost" ? '/newPost' : "/Amstramgram/newPost"}
           element={
             cookies.userToken ? <NewPost /> : <ErrorStatus status={"401"} />
           }
         />
         <Route
-          path={window.location.hostname.substring(0,9) === "localhost" ? '/editProfile' : "/amstramgram/editProfile"}
+          path={window.location.hostname.substring(0,9) === "localhost" ? '/editProfile' : "/Amstramgram/editProfile"}
           element={
             cookies.userToken ? <EditProfile /> : <ErrorStatus status={"401"} />
           }
         />
-        <Route path={window.location.hostname.substring(0,9) === "localhost" ? '/*' : "/amstramgram/*"}element={<ErrorStatus status={"404"} />} />
+        <Route path={window.location.hostname.substring(0,9) === "localhost" ? '/*' : "/Amstramgram/*"}element={<ErrorStatus status={"404"} />} />
       </Routes>
     </Router>
   );

@@ -75,7 +75,7 @@ const EditProfileComp: FC = () => {
   }, []);
 
   const handleClickBackBtn = () => {
-    window.location.hostname.substring(0,9) === "localhost" ? navigate('/profile') : navigate("/amstramgram/profile");
+    window.location.hostname.substring(0,9) === "localhost" ? navigate('/profile') : navigate("/Amstramgram/profile");
   };
 
   const handleClickBackDrop = () => {
@@ -134,7 +134,7 @@ const EditProfileComp: FC = () => {
       );
       console.log(resp.data);
       removeCookie("userToken", { path: "/", sameSite: "none", secure: true });
-      window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/amstramgram/");
+      window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/Amstramgram/");
     } catch (error: any) {
       const status = error.response.status;
       setErrStatus(String(status));
