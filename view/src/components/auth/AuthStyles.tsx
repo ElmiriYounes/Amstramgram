@@ -5,7 +5,7 @@ export const AuthPageText = styled.p`
     text-align: center;
 
     a{
-        color: #00a2ff;;
+        color: #005688;;
     }
 `;
 

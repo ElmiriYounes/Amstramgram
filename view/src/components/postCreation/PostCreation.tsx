@@ -77,9 +77,9 @@ const PostCreation = () => {
         inputLocalisationRef.current!.value = "";
       } catch (error: any) {
         const status = error.response.status;
-        setErrStatus(String(status));
-        console.log(error);
-        console.log(error);
+        status === "401"
+          ? setErrStatus(String(status))
+          : setErrorMessage("Error server, please try again");
       }
       setFetching(false);
     }
@@ -147,7 +147,13 @@ const PostCreation = () => {
                   </NewPostErrorDiv>
                 )}
                 <Button
-                  text={!fetching ? "Publish" : <AiOutlineLoading3Quarters className="icon" />}
+                  text={
+                    !fetching ? (
+                      "Publish"
+                    ) : (
+                      <AiOutlineLoading3Quarters className="icon" />
+                    )
+                  }
                   onClick={handleClick}
                 />
               </NewPostForm>
