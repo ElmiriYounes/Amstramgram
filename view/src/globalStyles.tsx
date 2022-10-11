@@ -1,7 +1,14 @@
 import styled, { createGlobalStyle, css } from "styled-components";
+import Montserrat from "./fonts/Montserrat/Montserrat-Regular.ttf";
 
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url(${Montserrat}) format("truetype");
+}
+
   *{
     box-sizing: border-box;
     margin: 0;

@@ -9,3 +9,7 @@ declare module "*.png" {
 declare module "*.webp" {
   export default "" as string;
 }
+
+declare module "*.ttf" {
+  export default "" as string;
+}
