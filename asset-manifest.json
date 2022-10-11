@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Amstramgram/static/js/main.eac0148e.js",
+    "main.js": "/Amstramgram/static/js/main.c47a79d6.js",
     "index.html": "/Amstramgram/index.html",
-    "main.eac0148e.js.map": "/Amstramgram/static/js/main.eac0148e.js.map"
+    "main.c47a79d6.js.map": "/Amstramgram/static/js/main.c47a79d6.js.map"
   },
   "entrypoints": [
-    "static/js/main.eac0148e.js"
+    "static/js/main.c47a79d6.js"
   ]
 }
