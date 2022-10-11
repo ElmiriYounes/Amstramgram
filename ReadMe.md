@@ -6,7 +6,7 @@
 
 ---
 
-### Live version [here](https://github.com/ElmiriYounes/Amstramgram)
+### Live version [here](https://elmiriyounes.github.io/Amstramgram/)
 
 ---
 

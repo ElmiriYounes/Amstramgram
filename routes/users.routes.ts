@@ -4,7 +4,7 @@ const router = Router();
 
 const { register, getMyUsername, update, getMyAvatar, deleteUser } = require("../controllers/users.controller");
 
-router.post("/auth/register", register);
+router.post("/users/register", register);
 
 router.get("/users/getMyUsername", verify,  getMyUsername);
 
