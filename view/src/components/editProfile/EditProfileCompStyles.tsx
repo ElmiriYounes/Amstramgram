@@ -112,8 +112,7 @@ export const EditProfileInput = styled.input<EditProfileInputProps>`
   margin-top: 20px;
   padding: 5px;
   background-color: #f7f7f7;
-  border: ${(props) =>
-    props.haveError ? "1px solid #d65e5e" : "1px solid #acacac"};
+  border: ${(props) => props.haveError ? "1px solid #d65e5e" : "1px solid #acacac"};
   pointer-events: ${(props) => props.disable && "none"};
 
   &:focus {
