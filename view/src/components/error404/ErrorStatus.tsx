@@ -15,7 +15,7 @@ const ErrorStatus: FC<IError> = (props) => {
   useEffect(() => {
     setTimeout(() => {
       props.status !== "404" && removeCookie("userToken", { path: "/", sameSite: "none", secure: true });
-      navigate("/");
+      window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/Amstramgram");
     }, 5000);
   }, []);
 

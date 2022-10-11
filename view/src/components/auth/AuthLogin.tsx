@@ -109,7 +109,7 @@ const AuthLogin: FC = () => {
             />
           </AuthForm>
         </AuthBox>
-        <AuthBox>d
+        <AuthBox>
           <AuthPageText>
             No account yet? Sign Up <Link to={window.location.hostname.substring(0,9) === "localhost" ? '/register' : "/Amstramgram/register"}>here</Link>
           </AuthPageText>
