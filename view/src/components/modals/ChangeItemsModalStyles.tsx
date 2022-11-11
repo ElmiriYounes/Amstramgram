@@ -30,7 +30,7 @@ export const ModalForm = styled.div`
 `;
 
 export const ModalBox = styled.div`
-    background-color: aliceblue;
+    background-color: #10375a;
     z-index: 10;
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
