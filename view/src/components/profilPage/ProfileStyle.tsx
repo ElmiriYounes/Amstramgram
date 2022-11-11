@@ -60,6 +60,8 @@ export const ProfilImg = styled.div`
   height: 100px;
   outline-offset: 3px;
   outline: 5px solid #000000;
+  -webkit-outline-offset: 3px;
+  -webkit-outline: 5px solid #000000;
   display: flex;
   justify-content: center;
   align-items: center;
