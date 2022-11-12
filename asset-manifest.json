@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/Amstramgram/static/js/main.278b1920.js",
+    "main.js": "/Amstramgram/static/js/main.034c6059.js",
     "static/js/787.54ab60a8.chunk.js": "/Amstramgram/static/js/787.54ab60a8.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/Amstramgram/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "service-worker.js": "/Amstramgram/service-worker.js",
     "index.html": "/Amstramgram/index.html",
-    "main.278b1920.js.map": "/Amstramgram/static/js/main.278b1920.js.map",
+    "main.034c6059.js.map": "/Amstramgram/static/js/main.034c6059.js.map",
     "787.54ab60a8.chunk.js.map": "/Amstramgram/static/js/787.54ab60a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.278b1920.js"
+    "static/js/main.034c6059.js"
   ]
 }
