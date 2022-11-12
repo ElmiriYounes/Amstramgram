@@ -58,10 +58,6 @@ export const ProfilImg = styled.div`
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  outline-offset: 3px;
-  outline: 5px solid #000000;
-  -webkit-outline-offset: 3px;
-  -webkit-outline: 5px solid #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +71,7 @@ export const ProfilImg = styled.div`
     object-fit: cover;
   }
 
-  button{
+  button {
     position: absolute;
     color: black;
     background-color: unset;
@@ -90,7 +86,7 @@ export const ImgContainer = styled.div`
   margin: 20px auto;
   position: relative;
 
-  .iconEdit{
+  .iconEdit {
     position: absolute;
     top: -30px;
     right: -20px;
@@ -106,14 +102,14 @@ export const ModalDelete = styled.div`
   background-color: white;
   padding: 20px;
 
-  .close{
+  .close {
     cursor: pointer;
   }
 `;
 
 export const ModalDeleteWrap = styled.div`
-background-color: rgb(0,0,0,.7);
-z-index: 9999;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 9999;
   position: fixed;
   display: flex;
   justify-content: center;

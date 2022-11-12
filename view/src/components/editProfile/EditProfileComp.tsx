@@ -238,7 +238,7 @@ const EditProfileComp: FC = () => {
               </EditProfileForm>
             </EditProfileBox>
           </EditProfileBoxContainer>
-          {usernameModalIsOpen ? (
+          {usernameModalIsOpen && (
             <ChangeUsernameModal
               onCancel={handleClickBackDrop}
               setUsername={setUsername}
@@ -247,8 +247,8 @@ const EditProfileComp: FC = () => {
               setFetching={setFetching}
               fetching={fetching}
             />
-          ) : null}
-          {passwordModalIsOpen ? (
+          ) }
+          {passwordModalIsOpen && (
             <ChangePasswordModal
               onCancel={handleClickBackDrop}
               setMsg={setMsg}
@@ -256,15 +256,15 @@ const EditProfileComp: FC = () => {
               setFetching={setFetching}
               fetching={fetching}
             />
-          ) : null}
+          )}
 
-          {modalIsOpen ? (
+          {modalIsOpen && (
             <BackDrop
               onClick={() => {
                 !fetching && handleClickBackDrop();
               }}
             />
-          ) : null}
+          )}
         </EditProfileMainContainer>
       )}
     </>

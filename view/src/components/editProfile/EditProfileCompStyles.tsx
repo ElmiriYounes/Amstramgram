@@ -20,7 +20,7 @@ export const ModalDelete = styled.div`
   .icon {
     animation: ${loading} 0.5s linear infinite;
   }
-  
+
   & > div {
     background-color: white;
     display: flex;
@@ -36,7 +36,7 @@ export const ModalDelete = styled.div`
       align-items: center;
       margin-top: 20px;
 
-      & > button{
+      & > button {
         padding: 5px 10px;
         background-color: black;
         color: white;
@@ -44,12 +44,12 @@ export const ModalDelete = styled.div`
         border-radius: 20px;
       }
 
-      & > button:hover{
+      & > button:hover {
         background-color: #1f1f1f;
         cursor: pointer;
       }
 
-      & > button:first-child{
+      & > button:first-child {
         margin-right: 20px;
       }
     }
@@ -112,7 +112,8 @@ export const EditProfileInput = styled.input<EditProfileInputProps>`
   margin-top: 20px;
   padding: 5px;
   background-color: #f7f7f7;
-  border: ${(props) => props.haveError ? "1px solid #d65e5e" : "1px solid #acacac"};
+  border: ${(props) =>
+    props.haveError ? "1px solid #d65e5e" : "1px solid #acacac"};
   pointer-events: ${(props) => props.disable && "none"};
 
   &:focus {
