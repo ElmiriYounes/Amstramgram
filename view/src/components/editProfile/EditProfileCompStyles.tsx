@@ -155,6 +155,7 @@ export const EditProfileBoxContainer = styled.div`
 
 export const EditProfileMainContainer = styled.div`
   background-color: #f7f7f7;
+  position: relative;
   width: 100vw;
   min-height: 100vh;
   display: grid;

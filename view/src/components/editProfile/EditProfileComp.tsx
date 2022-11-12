@@ -23,6 +23,7 @@ import { useCookies } from "react-cookie";
 import ErrorStatus from "../error404/ErrorStatus";
 import { ImgContainer, ProfilImg } from "../profilPage/ProfileStyle";
 import { uri } from "../../variables/Variables";
+import { ModalContainer } from "../modals/ChangeItemsModalStyles";
 
 const EditProfileComp: FC = () => {
   const navigate = useNavigate();
@@ -41,12 +42,9 @@ const EditProfileComp: FC = () => {
 
   const getUsername = async () => {
     try {
-      const resp = await axios.get(
-        `${uri}/users/getMyUsername`,
-        {
-          headers: { Authorization: `Bearer ${cookies["userToken"]}` },
-        }
-      );
+      const resp = await axios.get(`${uri}/users/getMyUsername`, {
+        headers: { Authorization: `Bearer ${cookies["userToken"]}` },
+      });
       setUsername(resp.data);
     } catch (error: any) {
       const status = error.response.status;
@@ -56,12 +54,9 @@ const EditProfileComp: FC = () => {
   };
   const getAvatar = async () => {
     try {
-      const response = await axios.get(
-        `${uri}/users/getMyAvatar`,
-        {
-          headers: { Authorization: `Bearer ${cookies["userToken"]}` },
-        }
-      );
+      const response = await axios.get(`${uri}/users/getMyAvatar`, {
+        headers: { Authorization: `Bearer ${cookies["userToken"]}` },
+      });
       setAvatar(response.data);
       setFetching(false);
     } catch (error: any) {
@@ -75,7 +70,9 @@ const EditProfileComp: FC = () => {
   }, []);
 
   const handleClickBackBtn = () => {
-    window.location.hostname.substring(0,9) === "localhost" ? navigate('/profile') : navigate("/Amstramgram/profile");
+    window.location.hostname.substring(0, 9) === "localhost"
+      ? navigate("/profile")
+      : navigate("/Amstramgram/profile");
   };
 
   const handleClickBackDrop = () => {
@@ -126,15 +123,14 @@ const EditProfileComp: FC = () => {
   const handleDeleteUser = async () => {
     try {
       setFetchingDelete(true);
-      const resp = await axios.delete(
-        `${uri}/users/deleteUser`,
-        {
-          headers: { Authorization: `Bearer ${cookies["userToken"]}` },
-        }
-      );
+      const resp = await axios.delete(`${uri}/users/deleteUser`, {
+        headers: { Authorization: `Bearer ${cookies["userToken"]}` },
+      });
       console.log(resp.data);
       removeCookie("userToken", { path: "/", sameSite: "none", secure: true });
-      window.location.hostname.substring(0,9) === "localhost" ? navigate('/') : navigate("/Amstramgram/");
+      window.location.hostname.substring(0, 9) === "localhost"
+        ? navigate("/")
+        : navigate("/Amstramgram/");
     } catch (error: any) {
       const status = error.response.status;
       setErrStatus(String(status));
@@ -238,32 +234,34 @@ const EditProfileComp: FC = () => {
               </EditProfileForm>
             </EditProfileBox>
           </EditProfileBoxContainer>
-          {usernameModalIsOpen && (
-            <ChangeUsernameModal
-              onCancel={handleClickBackDrop}
-              setUsername={setUsername}
-              setMsg={setMsg}
-              setErrStatus={setErrStatus}
-              setFetching={setFetching}
-              fetching={fetching}
-            />
-          ) }
-          {passwordModalIsOpen && (
-            <ChangePasswordModal
-              onCancel={handleClickBackDrop}
-              setMsg={setMsg}
-              setErrStatus={setErrStatus}
-              setFetching={setFetching}
-              fetching={fetching}
-            />
-          )}
 
           {modalIsOpen && (
-            <BackDrop
-              onClick={() => {
-                !fetching && handleClickBackDrop();
-              }}
-            />
+            <ModalContainer>
+              <BackDrop
+                onClick={() => {
+                  !fetching && handleClickBackDrop();
+                }}
+              />
+              {usernameModalIsOpen && (
+                <ChangeUsernameModal
+                  onCancel={handleClickBackDrop}
+                  setUsername={setUsername}
+                  setMsg={setMsg}
+                  setErrStatus={setErrStatus}
+                  setFetching={setFetching}
+                  fetching={fetching}
+                />
+              )}
+              {passwordModalIsOpen && (
+                <ChangePasswordModal
+                  onCancel={handleClickBackDrop}
+                  setMsg={setMsg}
+                  setErrStatus={setErrStatus}
+                  setFetching={setFetching}
+                  fetching={fetching}
+                />
+              )}
+            </ModalContainer>
           )}
         </EditProfileMainContainer>
       )}

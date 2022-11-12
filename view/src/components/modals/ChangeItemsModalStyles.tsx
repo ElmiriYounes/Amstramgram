@@ -32,13 +32,8 @@ export const ModalForm = styled.div`
 
 export const ModalBox = styled.div`
   background-color: aliceblue;
-  z-index: 10;
-  position: absolute;
+  position: relative;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  // safari breaks display flex center so use top left and translate
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   &:nth-child(2) {
     margin-top: 20px;
   }
@@ -79,4 +74,16 @@ export const ModalCancelBtn = styled.div`
     background-color: #464646;
     cursor: pointer;
   }
+`;
+
+export const ModalContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
